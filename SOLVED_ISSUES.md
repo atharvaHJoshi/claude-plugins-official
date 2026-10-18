@@ -22,9 +22,11 @@ issue was verified, what was fixed, and how the fix was validated.
   [`fix/marketplace-audit-and-ci-fixes`](https://github.com/atharvaHJoshi/claude-plugins-official/tree/fix/marketplace-audit-and-ci-fixes)
   ([compare view](https://github.com/atharvaHJoshi/claude-plugins-official/compare/main...fix/marketplace-audit-and-ci-fixes)).
 - **Upstream report:** [issue #6770](https://github.com/anthropics/claude-plugins-official/issues/6770)
-  — the two frontmatter bugs.
-- **Why an issue instead of a PR:** `close-external-prs.yml` auto-closes PRs from
-  non-members; for non-members the issue tracker is the accepted channel.
+  — the two frontmatter bugs, with repro and suggested patches.
+- **Upstream PR:** [#6771](https://github.com/anthropics/claude-plugins-official/pull/6771)
+  — opened for the reviewable diff, auto-closed by `close-external-prs.yml` as
+  expected (non-member PRs are closed by policy; the issue tracker is the
+  accepted non-member channel).
 - **Headline numbers:** frontmatter full-tree **4 errors → 0**; replicated
   I1–I11 **0 violations**; changed plugin dirs **14/14 pass**; marketplace CLI
   **29 → 27 warnings** (all `version` advice).
@@ -449,7 +451,8 @@ contain the fixes, and the PR description carries a condensed version.
   https://github.com/atharvaHJoshi/claude-plugins-official/tree/docs/audit-report
 - **Upstream bug report filed** for the two frontmatter bugs (the highest-value
   findings): https://github.com/anthropics/claude-plugins-official/issues/6770
-- **No upstream PR was opened**: `close-external-prs.yml` auto-closes PRs from
-  non-members (only marketplace-entry additions from live source repos stay
-  open), so a PR would be closed by the bot. If a member wants to upstream the
-  patch, the branch is ready as-is.
+- **Upstream PR opened** for the exact diff, then auto-closed by
+  `close-external-prs.yml` within a minute — non-member PRs are closed by
+  policy (the bot's comment points to the plugin submission form):
+  https://github.com/anthropics/claude-plugins-official/pull/6771
+  The branch stays ready if a member wants to upstream it.
